@@ -31,6 +31,7 @@ public class Test {
 
 
     private static String serviceAddress = "http://localhost:8087/services/user?wsdl";
+//    private static String serviceAddress = "http://localhost:8081/PatientService?wsdl";
 
     public static void main(String[] args){
         test1();
@@ -59,6 +60,7 @@ public class Test {
 //        client.getOutInterceptors().add(); // 添加拦截器
         try {
             Object[] result = client.invoke("getUserName", "1");
+//            Object[] result = client.invoke("getPatient", "1");
             System.out.println("WebService接口返回的数据[动态调用方式]：" + result);
         } catch (Exception e) {
             e.printStackTrace();
